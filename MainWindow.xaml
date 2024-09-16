@@ -1,0 +1,38 @@
+﻿<controls:Window x:Class="GHub_Cracker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GHub_Cracker"
+        xmlns:controls="https://handyorg.github.io/handycontrol"
+        mc:Ignorable="d"
+        Title="GHub Cracker" Height="509" Width="800" ResizeMode="CanMinimize">
+    <Grid>
+        <ScrollViewer x:Name="growlParent"  VerticalScrollBarVisibility="Hidden" HorizontalAlignment="Right">
+            <StackPanel controls:Growl.GrowlParent="True" VerticalAlignment="Top" Margin="0,10,10,10"/>
+        </ScrollViewer>
+
+        <controls:Card x:Name="crackerCard" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Height="323" Width="780">
+            <Grid>
+                <Label Style="{x:Null}" Content="修改 GHub" FontSize="20" Height="33" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Foreground="White" />
+                <TextBox x:Name="timeTxtBox" Style="{StaticResource TextBoxExtend}" HorizontalAlignment="Left" Margin="10,68,0,0" TextWrapping="Wrap" controls:InfoElement.Placeholder="键入新的剩余时间"  VerticalAlignment="Top" Width="698"/>
+                <Button Content="更改" HorizontalAlignment="Left" Margin="713,68,0,0" VerticalAlignment="Top" Width="60" Click="Button_Click"/>
+                <Label Style="{x:Null}" Content="更改 GHub 剩余时长" HorizontalAlignment="Left" Margin="12,43,0,0" VerticalAlignment="Top" Foreground="White"/>
+                <Label Style="{x:Null}" Content="获取 GHub 激活码 [思路来源: https://旁白.xyz/2024/04/05/自动获取GreenHub激活码：源码分析与脚本编写/]" HorizontalAlignment="Left" Margin="12,101,0,0" VerticalAlignment="Top" Foreground="White" Width="619"/>
+                <TextBox x:Name="codesTxtBox" Margin="10,131,5,10" AcceptsReturn="True" TextWrapping="Wrap" IsReadOnly="True">
+
+                </TextBox>
+                <Button Content="获取" HorizontalAlignment="Left" Margin="713,99,0,0" VerticalAlignment="Top" Width="60" Click="Button_Click_1"/>
+            </Grid>
+        </controls:Card>
+        <controls:Card HorizontalAlignment="Center" Margin="0,340,0,0" VerticalAlignment="Top" Height="99" Width="780">
+            <Grid>
+                <Label Style="{x:Null}" Content="下载 GHub" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" FontSize="20" Height="40" Background="Transparent" Foreground="White"/>
+                <Label Style="{x:Null}" Content="下载 URL" HorizontalAlignment="Left" Margin="24,45,0,0" VerticalAlignment="Top" Foreground="White"/>
+                <controls:TextBox HorizontalAlignment="Left" Margin="91,45,0,0" TextWrapping="Wrap" Text="https://kr042001.westmgreen.com/download/GreenHub%2520Setup%25202.2.0.exe" VerticalAlignment="Top" Width="677" IsReadOnly="True"/>
+
+            </Grid>
+        </controls:Card>
+        <Label Style="{x:Null}" Content="© 2024 luomoSoft Developers Fedration" Margin="273,444,273,0" VerticalAlignment="Top"/>
+    </Grid>
+</controls:Window>
